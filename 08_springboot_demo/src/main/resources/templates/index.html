@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-cn" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${title}">默认标题</title>
+
+    <!-- 简单样式，你后面可以自己加 Bootstrap / Tailwind / 自己的 CSS 文件 -->
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; background: #f5f5f5; }
+        .container { max-width: 800px; margin: 0 auto; background: #fff; padding: 20px; border-radius: 8px; }
+        .header { border-bottom: 1px solid #eee; margin-bottom: 16px; }
+        .card { border: 1px solid #ddd; padding: 16px; border-radius: 6px; margin-bottom: 12px; }
+        .card-title { font-weight: bold; margin-bottom: 8px; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <h1 th:text="${title}">标题占位</h1>
+    </div>
+
+    <div class="card">
+        <div class="card-title">基本信息</div>
+        <p th:text="${message}">这里是占位文本</p>
+    </div>
+
+    <div class="card">
+        <div class="card-title">支持的功能示例</div>
+        <ul>
+            <li>你可以在这里写表格、表单、按钮</li>
+            <li>可以用 CSS 做布局（栅格、flex 等）</li>
+            <li>可以用 JS 做交互（弹窗、动态加载数据等）</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <div class="card-title">调用 /hello 接口的链接</div>
+        <p>这是你原来的接口：<a href="/hello" target="_blank">/hello</a></p>
+    </div>
+</div>
+</body>
+</html>
